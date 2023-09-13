@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Language-Conditioned Affordance-Pose Detection in 3D Point Clouds">
+  <meta name="keywords" content="affordance detection, 6-DoF pose estimation, 3D point clouds, robotics">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="./static/images/3dapnet.jpg"/>
+  <link rel="image_src" href="./static/images/3dapnet.jpg">
+  <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/3dapnet.ico"/>
+
+  <title>Language-Conditioned Affordance-Pose Detection in 3D Point Clouds</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'q');
+
+
+  </script>
+
+  <script type="module"
+          src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css"/>
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title">
+          https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN
+        </h1>
+
+        <div class="column is-full_width">
+          <h2 class="title is-4">Submitted to ICRA 2024</h2>
+        </div>
+        <!-- <br> -->
+        <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=PhqGEY8AAAAJ&hl=en">Toan Nguyen</a><sup>1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="author-block">
+            <a href="https://scholar.google.com/citations?hl=th&user=qyExc4QAAAAJ&view_op=list_works">Minh Nhat Vu</a><sup>2</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com/citations?user=unbPvWAAAAAJ&hl=zh-CN">Baoru Huang</a><sup>3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="author-block">
+            <a href="https://www.linkedin.com/in/vovantuan1999/">Tuan Van vo</a><sup>1</sup>
+          </span><br>
+          <span class="author-block">
+            <a href="https://www.linkedin.com/in/tuongvy2301/">Vy Truong</a><sup>1</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://www.nganle.net/">Ngan Le</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://sites.google.com/tdtu.edu.vn/vongocthieu">Thieu Vo</a><sup>5</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://scholar.google.com.vn/citations?user=UA_83MUAAAAJ&hl=vi">Bac Le</a><sup>6</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+          <span class="author-block">
+            <a href="https://www.csc.liv.ac.uk/~anguyen/">Anh Nguyen</a><sup>7</sup>
+          </span>
+        </div>
+        <br>
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup>FPT Software AI Center</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>2</sup>ACIN - TU Wien</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>3</sup>Imperial College London</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>4</sup>University of Arkansas</span>&nbsp;&nbsp;<br>
+          <span class="author-block"><sup>5</sup>Ton Duc Thang University</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>6</sup>VNUHCM-University of Science</span>&nbsp;&nbsp;
+          <span class="author-block"><sup>7</sup>University of Liverpool</span>
+        </div>
+
+        <div class="column has-text-centered">
+          <div class="publication-links">
+            <span class="link-block">
+              <a class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code (coming soon)</span>
+                </a>
+            </span>
+
+            <span class="link-block">
+              <a class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-images"></i>
+                </span>
+                <span>Data (coming soon)</span>
+              </a>
+            </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Affordance detection and pose estimation are of great importance in many robotic applications.
+            Their combination helps the robot gain an enhanced manipulation capability,
+            in which the generated pose can facilitate the corresponding affordance task.
+            Previous methods for affodance-pose joint learning are limited to a predefined set of affordances,
+            thus limiting the adaptability of robots in real-world environments. In this paper,
+            we propose a new method for language-conditioned affordance-pose joint learning in 3D point clouds.
+            Given a 3D point cloud object, our method detects the affordance region and generates appropriate 6-DoF poses for any unconstrained affordance label.
+            Our method consists of an open-vocabulary affordance detection branch and a language-guided diffusion model that generates 6-DoF poses based on the affordance text.
+            We also introduce a new high-quality dataset for the task of language-driven affordance-pose joint learning.
+            Intensive experimental results demonstrate that our proposed method works effectively on a wide range of open-vocabulary affordances
+            and outperforms other baselines by a large margin. In addition, we illustrate the usefulness of our method in real-world robotic applications.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section" id="acknowledgements">
+  <div class="container content is-max-desktop">
+    <h2 class="title">Acknowledgements</h2>
+    <p>We borrow the page template from <a href="https://hypernerf.github.io/">HyperNeRF</a>. Special thanks to them!
+  </div>
+</section>
+
+<script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+</html>
